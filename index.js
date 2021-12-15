@@ -8,11 +8,6 @@ const Manager = require('./lib/Manager');
 
 
 
-//For Employee: name, id, email, getName(), getId(), getEmail(), getRole()
-//For Engineer: name, id, email, getName(), getId(), getEmail(), github [username], getGitHub(), getRole() / Overridden to return 'Engineer'
-//For Intern: name, id, email, getName(), getId(), getEmail(), school, getSchool(), getRole()/ Overridden to return 'Intern'
-//For Manager: name, id, email, getName(), getId(), getEmail(), officeNumber, getRole()/ Overridden to return 'Manager'
-
 // inquirer
 //     .prompt(
 //         questions
@@ -24,4 +19,7 @@ const Manager = require('./lib/Manager');
 //             name: 'name'
 //         },
 //     ])
-    //ex of what it will look like. add id, email, etc
+
+
+//FIRST: prompt for team managers name, id, email and office number (make function for manager profile)
+//THEN option to add engineer or intern or finish builiding team

@@ -12,8 +12,8 @@ const generateHTML = data => {
         <title>Team Profile</title>
     </head>
     <body>
-        <header class="container-fluid bg-primary m-0 p-2">
-            <h1 class="display-4 bg-primary text-white text-center">
+        <header class="container-fluid bg-danger m-0 p-2">
+            <h1 class="display-4 bg-danger text-white text-center">
                 My Team
             </h1>
         </header>

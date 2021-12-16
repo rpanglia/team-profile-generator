@@ -51,9 +51,9 @@ const addEmployee = () => {
     return inquirer.prompt([
         {
             type: 'list',
-            message: "What is the role of this new employee?",
+            message: "Do you wish to add a new employee (choose their role) or build your team? Use arrow keys to make your selection.",
             name: 'role',
-            choices: ['Intern', 'Engineer']
+            choices: ['Intern', 'Engineer', 'Build my team']
         },
         {
             type: 'input',
@@ -109,7 +109,7 @@ const addEmployee = () => {
         else {
             console.log(allEmployees);
             var html = generateHTML(allEmployees);
-            fs.writeFile('index.html', html, function(err) {
+            fs.writeFile('MyTeamProfile.html', html, function(err) {
                 if (err) {
                     return console.log(err);
                 }

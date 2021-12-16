@@ -6,9 +6,11 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
-const generateHTML = require('./src/')
+const allEmployees = [];
+const { createManagerCard, createInternCard, createEngineerCard } = require('./src/template-html');
+const generateHTML = require('./src/create-html');
 
-
+//add validation if possible
 const inputManager = addManagerInfo => {
     return inquirer.prompt([ 
         {
@@ -36,6 +38,7 @@ const inputManager = addManagerInfo => {
         const { name, id, email, officeNumber } = addManagerInfo;
         const manager = new Manager (name, id, email, officeNumber);
         console.log(manager);
+
     })
 
 }

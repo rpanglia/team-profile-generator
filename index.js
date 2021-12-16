@@ -2,9 +2,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const Employee = require('./lib/Employee');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
+const Intern = require('./lib/Intern');
+const Engineer = require('./lib/Engineer');
 
 const allEmployees = [];
 const { createManagerCard, createInternCard, createEngineerCard } = require('./src/template-html');
@@ -13,6 +13,7 @@ const generateHTML = require('./src/create-html');
 
 //add validation if possible
 const inputManager = addManagerInfo => {
+    console.log('Welcome to the Team Profile Generator! To get started, please answer the following questions to build your team.')
     return inquirer.prompt([ 
         {
             type: 'input',
@@ -112,7 +113,7 @@ const addEmployee = () => {
                 if (err) {
                     return console.log(err);
                 }
-                console.log('Success! You have added a new Employee.');
+                console.log('Success! You have added a new employee to your team!');
             })
         }
     })
@@ -121,6 +122,3 @@ const addEmployee = () => {
 //Function call
 inputManager()
 .then(addEmployee);
-
-//FIRST: prompt for team managers name, id, email and office number (make function for manager profile)
-//THEN option to add engineer or intern or finish builiding team

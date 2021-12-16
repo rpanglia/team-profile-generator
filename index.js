@@ -6,9 +6,11 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
+const generateHTML = require('./src/')
+
 
 const inputManager = addManagerInfo => {
-    inquirer.prompt([ 
+    return inquirer.prompt([ 
         {
             type: 'input',
             message: "What is your Manager's name?",
@@ -40,6 +42,8 @@ const inputManager = addManagerInfo => {
 
 //Function call
 inputManager();
+
+// init();
 
 
 // inquirer

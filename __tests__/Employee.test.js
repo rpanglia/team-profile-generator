@@ -1,5 +1,3 @@
-// const { test } = require('picomatch');
-// const { expect } = require('@jest/globals');
 const Employee = require('../lib/Employee');
 
 test('create an employee object', () => {

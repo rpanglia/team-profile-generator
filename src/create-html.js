@@ -17,7 +17,7 @@ const generateHTML = data => {
             </h1>
         </header>
         <main class="container">
-            <div class="row d-flex justify-content-center">
+            <div class="row row-cols-4 d-flex justify-content-center">
             ${data}
             </div>
         </main>

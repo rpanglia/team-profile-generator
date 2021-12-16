@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const Employee = require('./lib/Employee');
+// const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
@@ -51,7 +51,7 @@ const addEmployee = () => {
     return inquirer.prompt([
         {
             type: 'list',
-            message: "Do you wish to add a new employee (choose their role) or build your team? Use arrow keys to make your selection.",
+            message: "Do you wish to add a new employee (choose their role) or build your team?",
             name: 'role',
             choices: ['Intern', 'Engineer', 'Build my team']
         },

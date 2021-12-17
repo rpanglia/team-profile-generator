@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// const Employee = require('./lib/Employee');
+
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
@@ -11,14 +11,21 @@ const { createManagerCard, createInternCard, createEngineerCard } = require('./s
 const generateHTML = require('./src/create-html');
 
 
-//add validation if possible
 const inputManager = addManagerInfo => {
     console.log('Welcome to the Team Profile Generator! To get started, please answer the following questions to build your team.')
     return inquirer.prompt([ 
         {
             type: 'input',
             message: "What is your Manager's name?",
-            name: 'name'
+            name: 'name',
+                validate: inputName => {
+                    if (inputName) {
+                        return true;
+                    } else {
+                        console.log("Enter your Manager's name to continue!");
+                        return false;
+                    }
+                }
         },
         {
             type: 'input',
@@ -43,9 +50,8 @@ const inputManager = addManagerInfo => {
         var addManager = createManagerCard(manager);
         allEmployees.push(addManager);
         console.log(manager);
-
     })
-}
+};
 
 const addEmployee = () => {
     return inquirer.prompt([
@@ -95,19 +101,17 @@ const addEmployee = () => {
             let employee = new Intern (name, id, email, school);
             var addIntern = createInternCard(employee);
             allEmployees.push(addIntern);
-            console.log(employee);
         }
         else if (role === 'Engineer') {
             let employee = new Engineer (name, id, email, github);
             var addEngineer = createEngineerCard(employee);
             allEmployees.push(addEngineer);
-            console.log(employee);
         }
         if (confirmNewEmployee) {
             return addEmployee();
         }
         else {
-            console.log(allEmployees);
+
             var html = generateHTML(allEmployees);
             fs.writeFile('MyTeamProfile.html', html, function(err) {
                 if (err) {
@@ -117,7 +121,7 @@ const addEmployee = () => {
             })
         }
     })
-}
+};
 
 //Function call
 inputManager()

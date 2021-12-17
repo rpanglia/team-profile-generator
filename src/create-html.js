@@ -24,6 +24,6 @@ const generateHTML = data => {
     </body>
     </html>
     `
-}
+};
 
 module.exports = generateHTML;

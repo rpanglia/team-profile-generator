@@ -1,3 +1,4 @@
+
 const createManagerCard = data => {
     return `
     <div class="card m-3 p-1 shadow" style="width: 18rem;">
@@ -15,7 +16,6 @@ const createManagerCard = data => {
     </div>
     `
 };
-
 const createInternCard = data => {
     return `
     <div class="card m-3 p-1 shadow" style="width: 18rem;">
@@ -32,7 +32,6 @@ const createInternCard = data => {
         </div>
     </div>`
 };
-
 const createEngineerCard = data => {
     return `
     <div class="card m-3 p-1 shadow" style="width: 18rem;">

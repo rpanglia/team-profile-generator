@@ -15,14 +15,19 @@ This application runs in node.js and utilizes the NPM Jest and Inquirer Packages
 ## Installation
 - Clone this repository
 - Run the following commands: 'npm install jest' and 'npm install inquirer'
-- Run the following command: 'node index.js' and the command-line application will begin prompting.
-- Once all questions have been answered successfully, you will be prompted with a success message and the newly generated "MyTeamProfile.html" page will be generated for you to click on, in the root of his repository. Right click to 'Open in New Browser' and view your full Team Profile! 
+- Run the following command: 'node index.js' and the command-line application will begin.
+- Once all questions have been answered successfully, you will be prompted with a success message and the newly generated "MyTeamProfile.html" page will be available for you to click on, in the root of his repository. Right click to 'Open in New Browser' and view your full Team Profile! 
 
 ## Walkthrough Video
-
+https://watch.screencastify.com/v/oDh59SGkoln3CVRopV0N
 
 ## Screenshots
-
+![alltestspassing](/assets/4-complete-tests.jpg)
+![employeeengineertestspassing](/assets/employee-engineer-tests.jpg)
+![internmanagertestspassing](/assets/intern-manager-tests.jpg)
+![startingnodeindex.js](/assets/node1.jpg)
+![endingnodeindex.js](/assets/node2.jpg)
+![teamprofilegenerated](/assets/MyTeamProfile-html.jpg)
 
 ## Questions
 Should you require any additional information, please connect via:

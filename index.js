@@ -101,11 +101,13 @@ const addEmployee = () => {
             let employee = new Intern (name, id, email, school);
             var addIntern = createInternCard(employee);
             allEmployees.push(addIntern);
+            console.log(employee);
         }
         else if (role === 'Engineer') {
             let employee = new Engineer (name, id, email, github);
             var addEngineer = createEngineerCard(employee);
             allEmployees.push(addEngineer);
+            console.log(employee);
         }
         if (confirmNewEmployee) {
             return addEmployee();
